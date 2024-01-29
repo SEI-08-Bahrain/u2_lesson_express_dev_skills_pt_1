@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <h1>Metal Bands</h1>
+        <ul>
+        <% bands.forEach( band => { %>
+            <li>
+            <%= band.name %>
+                - 
+            <%= band.done ? 'done' : 'not done' %>
+            </li>
+        <% }); %>
+        </ul>
+    </body>
+  <html>
