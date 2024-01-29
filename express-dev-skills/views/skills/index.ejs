@@ -5,13 +5,11 @@
         <link rel='stylesheet' href='/stylesheets/style.css' />
     </head>
     <body>
-        <h1>Metal Bands</h1>
+        <h1>Express Skills</h1>
         <ul>
-        <% bands.forEach( band => { %>
+        <% skills.forEach( skill => { %>
             <li>
-            <%= band.name %>
-                - 
-            <%= band.done ? 'done' : 'not done' %>
+                <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
             </li>
         <% }); %>
         </ul>

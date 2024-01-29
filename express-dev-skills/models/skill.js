@@ -1,16 +1,16 @@
-const bands = [
-    {id: 125223, name: 'Sleep Token', done: true},
-    {id: 127904, name: 'Bad Omens', done: false},
-    {id: 139608, name: 'Motionless in White', done: false}
+const skills = [
+    {id: 125223, skill: 'Sleep Token', done: true},
+    {id: 127904, skill: 'Bad Omens', done: false},
+    {id: 139608, skill: 'Motionless in White', done: false}
   ];
  
  
   const getAll = () => {
-    return bands;
+    return skills;
   }
 
   const getOne = (id) => {
-    return bands.find(band => band.id === parseInt(id));
+    return skills.find(skill => skill.id === parseInt(id));
   }
  
   module.exports = {
