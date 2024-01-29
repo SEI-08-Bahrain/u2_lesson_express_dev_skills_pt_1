@@ -1,7 +1,7 @@
 const skills = [
-    {id: 125223, skill: 'Sleep Token', done: true},
-    {id: 127904, skill: 'Bad Omens', done: false},
-    {id: 139608, skill: 'Motionless in White', done: false}
+    {id: 125223, skill: 'Teamwork', done: true},
+    {id: 127904, skill: 'Communication Skills', done: false},
+    {id: 139608, skill: 'Networking Skills', done: false}
   ];
  
  
