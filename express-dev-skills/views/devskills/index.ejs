@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devskills</title>
+</head>
+  <body>
+    <h1>Developer skills learned</h1>
+    <ul>
+      <% devskills.forEach ( devskill=>{ %>
+        <a href="/devskills/<%= devskill.id %>"><%= devskill.devskill %></a>
+      <%})%>
+    </ul>
+  </body>
+</html>
