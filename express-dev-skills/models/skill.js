@@ -1,6 +1,6 @@
 const skills = [
   { lang: "javascript", framework: "react", database: "sql" },
-  { lang: "php", framework: "laravel", databse: "sql" }
+  { lang: "php", framework: "laravel", database: "sql" }
 ]
 
 const getAll = () => {

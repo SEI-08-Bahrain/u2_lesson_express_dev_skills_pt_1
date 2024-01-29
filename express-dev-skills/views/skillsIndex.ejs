@@ -10,7 +10,8 @@
 <body>
   <% skills.forEach(element=> { %>
     <h2>
-      <%= element.lang %> --- <%= element.framwork %> --- <%= element.database %>
+      Developer: <%= element.lang %> --- <%= element.framework %> --- <%= element.database %> --- <a
+              href="/skills/<%= element.lang %>">View</a>
     </h2>
     <% }); %>
 </body>
