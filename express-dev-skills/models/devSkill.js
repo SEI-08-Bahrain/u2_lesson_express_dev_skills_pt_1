@@ -34,4 +34,26 @@ const getOne = (id) => {
   return devSkill
 }
 
-module.exports = { getAll, getOne }
+const create = (devSkill) => {
+  let devSkillToAdd = {}
+  devSkillToAdd.id = Date.now() % 1000000
+  devSkillToAdd.unit = devSkill.unit
+  devSkillToAdd.skills = []
+  devSkillToAdd.skills.push(devSkill.skill1)
+  devSkillToAdd.skills.push(devSkill.skill2)
+  devSkillToAdd.skills.push(devSkill.skill3)
+  devSkillToAdd.learnt = false
+  devSkills.push(devSkillToAdd)
+}
+
+const deleteOne = (id) => {
+  const index = devSkills.findIndex((devSkill) => devSkill.id === parseInt(id))
+  devSkills.splice(index, 1)
+}
+const updateOne = (id, updatedDevSkillUnit) => {
+  let devSkillToUpdate = devSkills.find(
+    (devSkill) => devSkill.id === parseInt(id)
+  )
+  devSkillToUpdate.unit = updatedDevSkillUnit
+}
+module.exports = { getAll, getOne, create, deleteOne, updateOne }

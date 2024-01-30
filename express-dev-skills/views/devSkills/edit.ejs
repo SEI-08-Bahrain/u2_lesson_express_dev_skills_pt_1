@@ -4,18 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Developer Skills</title>
+  <title>Update Unit</title>
 </head>
 <body>
-
-  <h1>Yasmeen's Development Skills Learnt</h1>
-  <ul>    <% devSkills.forEach(devSkill => { %>
-    <li>
-      <a href='/devSkills/<%= devSkill.id %>' ><%=devSkill.unit%></a>
-      
-    </li>
-   <% }); %>
-  </ul>
-  <button onclick="window.location.href='/devSkills/new';" class="btn btn-success">Add Units</button>
+  <h3>Update</h3>
+  <form action="/devSkills/<%= devSkill.id %>?_method=PUT" method="POST">
+    <input type="text" name="unit" value="<%= devSkill.unit %>">
+    <button type="submit" class="btn btn-info">Update Unit Name</button>
+  </form>
 </body>
 </html>
