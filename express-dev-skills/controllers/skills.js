@@ -17,6 +17,20 @@ const index = (req, res) => {
   });
   };
 
+  const newSkill = (req, res) => {
+    res.render('skills/new');
+};
+
+const create = (req, res) => {
+  console.log(req.body);
+  Skill.create(req.body); 
+  res.redirect('/skills');
+};
+
+
   module.exports = {
-    index, show
+    index, 
+    show,
+    new: newSkill,
+    create
   };

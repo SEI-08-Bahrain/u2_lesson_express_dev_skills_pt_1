@@ -12,8 +12,16 @@ const skills = [
   const getOne = (id) => {
     return skills.find(skill => skill.id === parseInt(id));
   }
+
+  const create = (skill) => {
+    skill.id = Date.now() % 1000000;
+    skill.done = false;
+    skills.push(skill);
+};
  
   module.exports = {
-    getAll, getOne
+    getAll, 
+    getOne,
+    create
   };
   
