@@ -1,15 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title><%= title %></title>
-        <link rel='stylesheet' href='/stylesheets/style.css' />
-    </head>
-    <body>
-        <h1>Developer Skills</h1>
-        <ul>
-        <% skills.forEach( skill => { %>
-          <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
-        <% }); %>
-        </ul>
-    </body>
-  <html>
+<h1>Skills</h1>
+
+<a href="/skills/new" class="btn btn-primary">Add Skills</a>
+
+<% skills.forEach((skill) => { %>
+  <div>
+    <a href="/skills/<%= skill.id %>">
+      <h2><%= skill.skill %></h2>
+    </a>
+    <% if (skill.done) { %>
+      <p>Completed</p>
+    <% } else { %>
+      <p>Not Completed</p>
+    <% } %>
+    <a href="/skills/<%= skill.id %>/edit">Edit</a>
+    <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST" style="display: inline;">
+      <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+  </div>
+<% }) %>
