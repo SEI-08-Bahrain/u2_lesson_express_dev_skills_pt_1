@@ -23,11 +23,18 @@ const deleteOne = (id) => {
   const idx = skills.findIndex(skill => skill.id === parseInt(id));
   skills.splice(idx, 1);
 };
+
+const updateOne = (id, updatedSkill) => {
+  const skillToUpdate = skills.find(skill => skill.id === parseInt(id));
+  skillToUpdate.skill = updatedSkill; 
+  return skillToUpdate;
+}
  
   module.exports = {
     getAll, 
     getOne,
     create,
-    deleteOne
+    deleteOne,
+    updateOne
   };
   

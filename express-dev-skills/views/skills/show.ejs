@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+  <a href="/skills/<%= skill.id %>/edit">Edit</a>
     <h3><%= skill.skill %></h3>
   <h3>Having it: <%= skill.done ? 'Yes' : 'No' %></h3>
   <form action="/skills/<%= skill.id %>?_method=DELETE"
