@@ -6,10 +6,16 @@
     </head>
     <body style="display: flex; align-items: center; flex-direction: column;">
         <h1>Skill List</h1>
+        <a href="/skills/new">Add skill</a>
         <ul>
         <% skills.forEach( skill => { %>
           <li style="display: inline-block; margin: 3vh;">
           <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
+          <h3>Experiance out of 10: <%= skill.experiance %></h3>
+          <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
+            <button type="submit">Remove Skill</button>
+            </form>
+            <a href="/skills/<%= skill.id %>/edit">Edit</a>
         <% }); %>
         </li>
         </ul>
