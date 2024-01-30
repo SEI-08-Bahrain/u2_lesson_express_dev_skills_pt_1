@@ -8,5 +8,8 @@
 <body style="display: flex; align-items: center; flex-direction: column;">
   <h3><%= skill.skill %></h3>
   <h3>Experiance out of 10: <%= skill.experiance %></h3>
+  <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
+    <button type="submit">Remove Skill</button>
+    </form>
 </body>
 </html>
