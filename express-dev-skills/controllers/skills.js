@@ -10,7 +10,19 @@ const show = (req, res) => {
   res.render("skills", {skills});
 }
 
+const newSkill = (req, res) => {
+  res.render("new");
+}
+
+const createSkill = (req, res) => {
+  console.log(req.body);
+  skill.create(req.body);
+  res.redirect("/skills");
+}
+
 module.exports = {
   index,
-  show
+  show,
+  new: newSkill,
+  create: createSkill
 }
