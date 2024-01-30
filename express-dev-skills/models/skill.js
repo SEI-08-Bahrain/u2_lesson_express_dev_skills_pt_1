@@ -21,9 +21,20 @@ const deleteOne = (lang) => {
   skills.splice(idx, 1);
 }
 
+const editOne = (lang) => {
+  return skills.find(skill => skill.lang === lang);
+}
+
+const updateOne = (lang, newSkill) => {
+  const skillUpdate = skills.find(value => value.lang === lang);
+  skillUpdate.framework = newSkill; 
+}
+
 module.exports = {
   getAll,
   getOne,
   create,
-  deleteOne
+  deleteOne,
+  editOne,
+  updateOne
 }
