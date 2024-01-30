@@ -3,6 +3,9 @@
     <h2>
       Developer: <%= element.lang %> --- <%= element.framework %> --- <%= element.database %> --- <a
               href="/skills/<%= element.lang %>">View</a>
+            <form action="/skills/<%= element.lang %>?_method=DELETE" method="POST"><button
+                type="submit">Delete</button>
+            </form>
     </h2>
     <% }); %>
       <h4><a href="/skills/new">Add new skill</a></h4>

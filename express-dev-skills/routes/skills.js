@@ -9,4 +9,5 @@ router.get("/:lang", skillsCtrl.show);
 
 router.post("/", skillsCtrl.create);
 
+router.delete("/:lang", skillsCtrl.delete);
 module.exports = router;

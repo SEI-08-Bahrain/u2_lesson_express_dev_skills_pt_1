@@ -20,9 +20,15 @@ const createSkill = (req, res) => {
   res.redirect("/skills");
 }
 
+const deleteSkill = (req, res) => {
+  skill.deleteOne(req.params.lang);
+  res.redirect("/skills");
+}
+
 module.exports = {
   index,
   show,
   new: newSkill,
-  create: createSkill
+  create: createSkill,
+  delete: deleteSkill
 }

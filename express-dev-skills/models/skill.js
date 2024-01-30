@@ -16,8 +16,14 @@ const create = (value) => {
   console.log(value);
 }
 
+const deleteOne = (lang) => {
+  const idx = skills.findIndex(value => value.lang === lang);
+  skills.splice(idx, 1);
+}
+
 module.exports = {
   getAll,
   getOne,
-  create
+  create,
+  deleteOne
 }
