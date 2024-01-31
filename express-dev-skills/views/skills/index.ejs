@@ -7,11 +7,23 @@
 </head>
 
 <body>
-  <h1>Express Skills</h1>
+  <h1>Skills Express</h1>
+  <a href="/skills/new">Add Skill</a>
   <ul>
-    <% skills.forEach(e=>{ %>
-      <a href="/skills/<%= e.id %>"><%= e.name %></a>
+
+    <% skills.forEach(e=> { %>
+      <li>
+        <a href="/skills/<%=  e.id %>">
+          <%= e.skills %>
+        </a>
+
+
+
+
+
+      </li>
       <% }); %>
   </ul>
+
 </body>
 <html>

@@ -1,33 +1,48 @@
 const skills = [
   {
-    id: 1,
-    name: "John Developer",
-    skills: 'React',
+    id: 587345,
+  
+    skills: "React",
   },
   {
-    id: 2,
-    name: "Jane Coder",
-    skills: 'Express.js',
+    id: 205403,
+    
+    skills: "Express.js",
   },
   {
-    id: 3,
-    name: "Alex Developer",
-    skills: 'Python',
+    id: 145027,
+   
+    skills: "Python",
   },
 ]
-
-const getOne = (id) => {
-  let skill = skills.find((e) =>{
-    return e.id === parseInt(id)
-  })
-  return skill
-}
-
 
 const getAll = () => {
   return skills
 }
 
+const getOne = (id) => {
+  let skill = skills.find((e) => {
+    return e.id === parseInt(id)
+  })
+  return skill
+}
+
+const create = (skill) => {
+  skill.id = Date.now() % 1000000
+ 
+  skills.push(skill)
+  console.log(skills)
+}
+
+const deleteOne = (id) => {
+  const idx = skills.findIndex((e) => {
+    return e.id === parseInt(id)})
+  skills.splice(idx, 1)
+}
+
 module.exports = {
-  getAll,getOne
+  getAll,
+  getOne,
+  create,
+  deleteOne,
 }

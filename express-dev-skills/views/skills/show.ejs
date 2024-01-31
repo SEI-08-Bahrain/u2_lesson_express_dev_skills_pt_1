@@ -8,12 +8,17 @@
 </head>
 
 <body>
-  <h3>
-    <%= skills.name %>
-  </h3>
+
   <h4>
     <%= skills.skills %>
   </h4>
+
+
+  <form action="/skills/<%= skills.id %>?_method=DELETE" class="delete-form" method="POST">
+    <button type="submit">Delete Skill</button>
+  </form>
+
+
 </body>
 
 </html>
