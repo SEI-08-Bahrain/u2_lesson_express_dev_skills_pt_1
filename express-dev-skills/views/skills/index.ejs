@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <h1>Express Skills</h1>
+        <a href="/skills/new" class="add">Add Skill</a>
+        <ul>
+        <% skills.forEach( skill => { %>
+            <li>
+                <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
+            </li>
+        <% }); %>
+        </ul>
+    </body>
+  <html>
