@@ -2,11 +2,8 @@
   <% skills.forEach(element=> { %>
     <h2>
       Developer: <%= element.lang %> --- <%= element.framework %> --- <%= element.database %> --- <a
-              href="/skills/<%= element.lang %>">View</a> ---
-            <a href="/skills/<%= element.lang %>/edit"><button>Edit</button></a>
-            <form action="/skills/<%= element.lang %>?_method=DELETE" method="POST"><button
-                type="submit">Delete</button>
-            </form>
+              href="/skills/<%= element.lang %>">View</a>
+
     </h2>
     <% }); %>
       <h4><a href="/skills/new">Add new skill</a></h4>
