@@ -34,7 +34,7 @@ const updateOne = (req, res) => {
   const skillLang = req.params.lang;
   const skillUpdate = req.body.framework;
   skill.updateOne(skillLang, skillUpdate);
-  res.redirect("/skills");
+  res.redirect("/skills/"+skillLang);
 }
 
 module.exports = {
